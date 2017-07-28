@@ -3,9 +3,12 @@ package fi.hacklab.wolfgar.piisamirotta;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+
+import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void playSound(View v){
+        m_player.seekTo(0);
         m_player.start();
     }
 }
